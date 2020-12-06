@@ -1,0 +1,38 @@
+.special {
+    margin-top: 100px;
+    &__card {
+        margin: 20px 0;
+        padding-left: 100px;
+        color: #fff;
+        border-radius: 10px;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+        display: flex;
+        @media screen and (@m600) {
+            padding: 0;
+        }
+    }
+
+    &__content {
+        background: fade(#fff, 35);
+        padding: 120px 35px 100px;
+        text-align: center;
+        @media screen and (@m600) {
+            margin: 0 auto;
+        }
+        @media screen and (@m425) {
+            padding: 120px 10px 100px;
+            width: 100%;
+        }
+    }
+
+    &__description {
+        font-size: 24px;
+        font-weight: 450;
+        margin-top: 25px;
+        line-height: 30px;
+    }
+
+    &__btn {
+        margin-top: 55px;
+    }
+}

@@ -1,0 +1,37 @@
+.rules {
+    .container {
+        @media screen and (@m425) {
+            padding: 0;
+        }
+    }
+    &__card {
+        padding: 30px 100px;
+        background: #eeeeee;
+        border-radius: 10px;
+        margin: 50px 0;
+        @media screen and (@m768) {
+            padding: 30px 45px;
+        }
+        @media screen and (@m425) {
+            padding: 30px 10px;
+            padding-left: 25px;
+        }
+    }
+
+    &__heading {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    &__list {
+        list-style: square !important;
+        li {
+            font-size: 16px;
+            font-weight: 450;
+            margin-bottom: 8px;
+            line-height: 125%;
+            list-style: inherit;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+<section id="services-list" class="services-list">
+    <div class="services-list__container container">
+        <div class="services-list__img-wrapper">
+            <img src="./img/services/manicure/services/img-1.jpg" alt="Маникюр и педикюр">
+        </div>
+        <div class="services-list__content">
+            <div class="services-list__heading">
+                <h2>Прайс-лист</h2>
+            </div>
+
+            <div>
+                <ul class="services-list__prices dotted-list list list--gutter list--light">
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span><b>Маникюр</b></span>
+                        </div>
+                    </li>
+
+                    @@loop('../services-list-item.html', [
+                    { value: "от 1 000 &#8381;", prop: "ПЕРСОНАльный комплексный обрезной маникюр + покрытие*" },
+                    { value: "от 800 &#8381;", prop: "ПЕРСОНАльный экспресс-маникюр" },
+                    { value: "от 1 900 &#8381;", prop: "ПИЛОЧНЫЙ ЭКО-маникюр + Уход Aravia" },
+                    { value: "от 1900 &#8381;", prop: "Аппаратный маникюр" },
+                    { value: "от 1 000 &#8381;", prop: "P.Shine втирка" },
+                    { value: "от 350 &#8381;", prop: "Полировка ногтей" },
+                    { value: "от 250 &#8381;", prop: "Ремонт\укрепление 1-ого ногтя" },
+                    { value: "от 350 &#8381;", prop: "Коррекция формы ногтей" },
+                    ])
+
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span><b>Педикюр</b></span>
+                        </div>
+                    </li>
+
+                    @@loop('../services-list-item.html', [
+                    { value: "от 1 800 &#8381;", prop: "ПЕРСОНАльный педикюр" },
+                    { value: "от 1 800 &#8381;",
+                    prop: "Снятие лак\гель-лак + ПЕРСОНАльный комплексный обрезной педикюр + покрытие лаком*" },
+                    { value: "от 2 900 &#8381;", prop: "Пилочный ЭКО педикюр"},
+                    { value: "от 1 200 &#8381;", prop: "Экспресс-педикюр обработка кутикулы" },
+                    { value: "от 250 &#8381;", prop: "Обработка мозоли" },
+                    ])
+
+
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span><b>Покрытие</b></span>
+                        </div>
+                    </li>
+
+                    @@loop('../services-list-item.html', [
+                    { value: "от 200 &#8381;", prop: "LaRic Лечебное покрытие" },
+                    { value: "от 500 &#8381;", prop: "Покрытие лаком/гель-лаком*" },
+                    { value: "от 500 &#8381;", prop: "Выравнивание базой"},
+                    { value: "от 800 &#8381;", prop: "IBX Восстановление и укрепление ногтей" },
+                    { value: "от 100 &#8381;", prop: "Дизайн одного ногтя" },
+                    { value: "от 300 &#8381;", prop: "Художественная роспись лаком 1 ноготь" },
+                    ])
+
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span><b>Моделирование</b></span>
+                        </div>
+                    </li>
+
+                    @@loop('../services-list-item.html', [
+                    { value: "от 4 000 &#8381;", prop: "Моделирование под лак (гель)" },
+                    { value: "от 1 000 &#8381;", prop: "Укрепление и выравнивание ногтевой пластины" },
+                    { value: "от 4 000 &#8381;", prop: "Моделирование френч Сreative (гель)"},
+                    { value: "от 1 100 &#8381;", prop: "Снятие искусственных ногтей" },
+                    { value: "от 2 900 &#8381;", prop: "Коррекция под лак (гель)" },
+                    { value: "от 3 200 &#8381;", prop: "Коррекция френч Сreative (гель)" },
+                    ])
+
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span><b>Моделирование</b></span>
+                        </div>
+                    </li>
+
+                    @@loop('../services-list-item.html', [
+                    { value: "от 500 &#8381;", prop: "Aravia уход для рук \ ног" },
+                    { value: "от 1 100 &#8381;", prop: "Aravia интенсивный уход для рук \ ног" },
+                    { value: "от 1 500 &#8381;", prop: "LaRic согревающий уход для рук \ ног"},
+                    { value: "от 300 &#8381;", prop: "LaRic Жидкая перчатка" },
+                    ])
+
+                </ul>
+
+                <p class="services-list__prices-description">
+                    * - тип материала уточняйте у специалиста
+                </p>
+            </div>
+
+            <div class="services-list__btn-wrapper">
+                <button class="services-list__btn btn btn_primary" onClick="showSonlineWidget(sonlineWidgetOptions);">
+                    <span> Записаться </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

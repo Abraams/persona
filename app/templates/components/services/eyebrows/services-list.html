@@ -1,0 +1,41 @@
+<section id="services-list" class="services-list">
+    <div class="services-list__container container">
+        <div class="services-list__img-wrapper">
+            <img src="./img/services/eyebrows/services/img-1.jpg" alt="Брови и ресницы">
+        </div>
+        <div class="services-list__content">
+            <div class="services-list__heading">
+                <h2>Прайс-лист</h2>
+            </div>
+
+            <div>
+                <ul class="services-list__prices dotted-list list list--gutter list--light">
+                    @@loop('../services-list-item.html', [
+                    { value: "от 800 &#8381;", prop: "Окрашивание бровей" },
+                    { value: "от 1 100 &#8381;", prop: "Ламинирование бровей" },
+                    { value: "от 700 &#8381;", prop: "Дизайн бровей" },
+                    { value: "от 1 050 &#8381;", prop: "Окрашивание бровей хной" },
+                    { value: "от 800 &#8381;", prop: "Окрашивание ресниц" },
+                    { value: "от 4 000 &#8381;", prop: "Химическая завивка ресниц" },
+                    { value: "от 1 500 &#8381;", prop: "Снятие нарощенных ресниц" },
+                    { value: "от 1 900 &#8381;", prop: "Свежий взгляд Хна" },
+                    { value: "от 1 650 &#8381;", prop: "Свежий взгляд Краска" },
+                    { value: "от 2 200 &#8381;", prop: "Моделирование Взгляда Краска" },
+                    { value: "от 2 450 &#8381;", prop: "Моделирование Взгляда MIX" },
+                    { value: "от 2 700 &#8381;", prop: "Моделирование Взгляда ХНА" },
+                    ])
+                </ul>
+
+                <p class="services-list__prices-description">
+                </p>
+
+            </div>
+
+            <div class="services-list__btn-wrapper">
+                <button class="services-list__btn btn btn_primary" onClick="showSonlineWidget(sonlineWidgetOptions);">
+                    <span> Записаться </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,96 @@
+.container {
+    max-width: 1280px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    &_fluid {
+        max-width: 90%;
+
+        @media screen and (@m1450) {
+            max-width: 100%;
+        }
+    }
+}
+
+.page-wrap {
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // overflow: hidden;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    > svg {
+        width: 100%;
+        height: 100%;
+        transition: fill 0.14s ease-in-out;
+
+        path {
+            transition: inherit;
+        }
+    }
+
+    &:hover {
+        > svg {
+            fill: @gold-light;
+        }
+    }
+}
+
+.img-brightness {
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: background 0.2s ease-in-out;
+    }
+}
+
+.checkbox {
+    display: flex;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+
+    &__control {
+        display: inline-grid;
+        width: 18px;
+        height: 18px;
+        border: 0.1em solid #fff;
+        margin-right: 8px;
+
+        svg {
+            transition: transform 0.1s ease-in 25ms;
+            transform: scale(0);
+            transform-origin: bottom left;
+        }
+    }
+
+    &__input {
+        display: flex;
+
+        input {
+            display: none;
+
+            &:checked + .checkbox__control svg {
+                transform: scale(1);
+            }
+        }
+    }
+}

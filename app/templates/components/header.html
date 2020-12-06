@@ -1,0 +1,73 @@
+<header id="header" class="header">
+  <div class="header__bg-closeable" data-menu-exit></div>
+  <div class="container container_fluid">
+    <div class="header__content">
+      <a href="./" class="header__logo">
+        <img src="./img/base/logo.png" alt="Персона, салон красоты" data-menu-exit>
+      </a>
+      <nav class="header__navigation">
+        <menu class="header__menu">
+          <li>
+            <a href="./#services" data-menu-exit>Услуги и цены</a>
+          </li>
+          <li>
+            <a href="./galery.html">Галерея</a>
+          </li>
+          <li>
+            <a href="./#staff" data-menu-exit>Наши мастера</a>
+          </li>
+          <li>
+            <a href="./promo.html">Акции</a>
+          </li>
+          <li>
+            <a href="./certificates.html">Сертификаты</a>
+          </li>
+          <li>
+            <a href="./#contacts" data-menu-exit>Контакты</a>
+          </li>
+        </menu>
+      </nav>
+      <div class="header__other">
+        <div class="header__social">
+          <a href="!#" target="_blank" class="header__social-link" data-menu-exit>
+            <i class="header__social-icon icon">
+              @@include('../../img/base/whatsapp.svg')
+            </i>
+          </a>
+          <a href="!#" target="_blank" class="header__social-link" data-menu-exit>
+            <i class="header__social-icon icon">
+              @@include('../../img/base/instagram.svg')
+            </i>
+          </a>
+          <a href="!#" target="_blank" class="header__social-link" data-menu-exit>
+            <i class="header__social-icon icon">
+              @@include('../../img/base/facebook.svg')
+            </i>
+          </a>
+          <a href="!#" target="_blank" class="header__social-link" data-menu-exit>
+            <i class="header__social-icon icon">
+              @@include('../../img/base/telegram.svg')
+            </i>
+          </a>
+        </div>
+        <div class="header__work-time">
+          <p>Пн - Ср: 09:00 - 21:00</p>
+          <p>Чт - Сб: 09:00 - 22:00</p>
+          <p>Вс: 10:00 - 21:00</p>
+        </div>
+        <button onClick="showSonlineWidget(sonlineWidgetOptions);" class="header__btn btn btn_primary-outlined"
+          data-menu-exit>
+          <span>Записаться</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="header__mobile">
+    @@include('../../img/base/logo-2.svg')
+  </div>
+  <div class="header__toggler">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>

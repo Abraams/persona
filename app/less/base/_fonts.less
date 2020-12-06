@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: local('Fedra Sans Pro Medium'), local('FedraSansPro-Medium'),
+        url('/fonts/FedraSansPro-Medium.woff2') format('woff2'),
+        url('/fonts/FedraSansPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: local('Fedra Sans Pro Book Italic'), local('FedraSansPro-BookItalic'),
+        url('/fonts/FedraSansPro-BookItalic.woff2') format('woff2'),
+        url('/fonts/FedraSansPro-BookItalic.woff') format('woff');
+    font-weight: 450;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: local('Fedra Sans Pro Medium Italic'),
+        local('FedraSansPro-MediumItalic'),
+        url('/fonts/FedraSansPro-MediumItalic.woff2') format('woff2'),
+        url('/fonts/FedraSansPro-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: local('Fedra Sans Pro Bold Italic'), local('FedraSansPro-BoldItalic'),
+        url('/fonts/FedraSansPro-BoldItalic.woff2') format('woff2'),
+        url('/fonts/FedraSansPro-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: local('Fedra Sans Pro Bold'), local('FedraSansPro-Bold'),
+        url('/fonts/FedraSansPro-Bold.woff2') format('woff2'),
+        url('/fonts/FedraSansPro-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: local('Fedra Sans Pro Light Italic'), local('FedraSansPro-LightItalic'),
+        url('/fonts/FedraSansPro-LightItalic.woff2') format('woff2'),
+        url('/fonts/FedraSansPro-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: local('Fedra Sans Pro Book'), local('FedraSansPro-Book'),
+        url('/fonts/FedraSansPro-Book.woff2') format('woff2'),
+        url('/fonts/FedraSansPro-Book.woff') format('woff');
+    font-weight: 450;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: local('Fedra Sans Pro Normal'), local('FedraSansPro-Normal'),
+        url('/fonts/FedraSansPro-Normal.woff2') format('woff2'),
+        url('/fonts/FedraSansPro-Normal.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: local('Fedra Sans Pro Normal Italic'),
+        local('FedraSansPro-NormalItalic'),
+        url('/fonts/FedraSansPro-NormalItalic.woff2') format('woff2'),
+        url('/fonts/FedraSansPro-NormalItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fedra Sans Pro';
+    src: local('Fedra Sans Pro Light'), local('FedraSansPro-Light'),
+        url('/fonts/FedraSansPro-Light.woff2') format('woff2'),
+        url('/fonts/FedraSansPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Journal Sans';
+    src: local('Journal Sans Bold'), local('JournalSans-Bold'),
+        url('/fonts/JournalSans-Bold.woff2') format('woff2'),
+        url('/fonts/JournalSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Journal Sans';
+    src: local('Journal Sans'), local('JournalSans'),
+        url('/fonts/JournalSans.woff2') format('woff2'),
+        url('/fonts/JournalSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Journal Sans';
+    src: local('Journal Sans Italic'), local('JournalSans-Italic'),
+        url('/fonts/JournalSans-Italic.woff2') format('woff2'),
+        url('/fonts/JournalSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body,
+html {
+    font-family: @Fedra;
+    font-size: 16px;
+    color: @primary-text;
+}
+
+h2 {
+    font-size: 46px;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 58px;
+    @media screen and (@m768) {
+        font-size: 42px;
+    }
+    @media screen and (@m500) {
+        font-size: 36px;
+    }
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 450;
+}
+
+h4 {
+    font-size: 22px;
+    font-weight: 450;
+}
+
+.text {
+    &-gray {
+        color: @gray;
+        &-dark {
+            color: @gray-dark;
+        }
+    }
+    &-wihte {
+        color: #fff;
+    }
+
+    &-gold {
+        color: @gold;
+        &-light {
+            color: @gold-light;
+        }
+    }
+}

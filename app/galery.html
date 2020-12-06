@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta name="description" content="Описание сайта">
+
+        @@include('templates/base/_head-base.html')
+
+        <title>Галерея | Persona BIA</title>
+    </head>
+
+    <body id="index">
+        <div class="page-wrap">
+            @@include('templates/components/header.html')
+            <main>
+                @@include('templates/components/galery/main-image.html')
+                @@include('templates/components/galery/galery-grid.html')
+            </main>
+            @@include('templates/components/footer.html')
+
+            @@include('templates/components/backcall.html')
+        </div>
+
+        <!-- SCRIPTS -->
+        @@include('templates/base/_scripts.html')
+    </body>
+
+</html>

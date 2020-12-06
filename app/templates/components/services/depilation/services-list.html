@@ -1,0 +1,68 @@
+<section id="services-list" class="services-list">
+    <div class="services-list__container container">
+        <div class="services-list__img-wrapper">
+            <img src="./img/services/depilation/services/img-1.jpg" alt="Брови и ресницы">
+        </div>
+        <div class="services-list__content">
+            <div class="services-list__heading">
+                <h2>Прайс-лист</h2>
+            </div>
+
+            <div>
+                <ul class="services-list__prices dotted-list list list--gutter list--light">
+
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span><b>WAX end GO</b></span>
+                        </div>
+                    </li>
+
+                    @@loop('../services-list-item.html', [
+                    { value: "от 1 900 &#8381;", prop: "Бикини" },
+                    { value: "от 1 900 &#8381;", prop: "Бикини (м)" },
+                    { value: "от 1 400 &#8381;", prop: "Голени+" },
+                    { value: "от 3 000 &#8381;", prop: "Глубокое бикини" },
+                    { value: "от 800 &#8381;", prop: "Деликатная зона" },
+                    { value: "от 800 &#8381;", prop: "Руки до логтя" },
+                    { value: "от 1 300 &#8381;", prop: "Руки полностью" },
+                    { value: "от 1 200 &#8381;", prop: "Голени" },
+                    { value: "от 1 300 &#8381;", prop: "Бедра" },
+                    { value: "от 2 100 &#8381;", prop: "Ноги полностью" },
+                    { value: "от 900 &#8381;", prop: "Подмышки" },
+                    { value: "от 800 &#8381;", prop: "Ягодицы" },
+                    { value: "от 1 200 &#8381;", prop: "Спина" },
+                    ])
+
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span><b>Шугаринг</b></span>
+                        </div>
+                    </li>
+
+                    @@loop('../services-list-item.html', [
+                    { value: "от 1 980 &#8381;", prop: "Бикини" },
+                    { value: "от 2 160 &#8381;", prop: "Бикини (м)" },
+                    { value: "от 3 190 &#8381;", prop: "Глубокое бикини" },
+                    { value: "от 770 &#8381;", prop: "Деликатная зона" },
+                    { value: "от 770 &#8381;", prop: "Руки до логтя" },
+                    { value: "от 1 320 &#8381;", prop: "Руки полностью" },
+                    { value: "от 1 210 &#8381;", prop: "Голени" },
+                    { value: "от 1 320 &#8381;", prop: "Бедра" },
+                    { value: "от 2 090 &#8381;", prop: "Ноги полностью" },
+                    { value: "от 880 &#8381;", prop: "Подмышки" },
+                    ])
+                </ul>
+
+                <p class="services-list__prices-description">
+                </p>
+
+            </div>
+
+            <div class="services-list__btn-wrapper">
+                <button class="services-list__btn btn btn_primary" onClick="showSonlineWidget(sonlineWidgetOptions);">
+                    <span> Записаться </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

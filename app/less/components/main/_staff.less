@@ -1,0 +1,135 @@
+.staff {
+    margin-top: 90px;
+    padding: 55px 0 225px;
+    color: #fff;
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 9;
+        text-align: center;
+
+        .icon {
+            max-width: 86px;
+            @media screen and (@m768) {
+                max-width: 75px;
+            }
+            @media screen and (@m500) {
+                max-width: 70px;
+            }
+        }
+    }
+
+    .staff__swiper-button-next,
+    .staff__swiper-button-prev {
+        @media screen and (@m425) {
+            display: none;
+        }
+    }
+
+    &__swiper {
+        &-wrapper {
+            margin-top: 50px;
+            padding: 25px 0;
+        }
+
+        &-button {
+            &-prev,
+            &-next {
+            }
+        }
+    }
+
+    &__item {
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media screen and (@m1280) {
+                flex-direction: column-reverse;
+            }
+        }
+
+        &-info {
+            width: ~'calc(63% - 40px)';
+            text-align: center;
+            @media screen and (@m1280) {
+                width: 100%;
+                max-width: 520px;
+            }
+        }
+
+        &-heading {
+            margin-bottom: 55px;
+            text-align: center;
+            @media screen and (@m1280) {
+                margin-top: 50px;
+            }
+            h3 {
+                font-size: 40px;
+                padding: 8px 12px;
+            }
+            span {
+                font-size: 20px;
+                font-style: italic;
+                font-weight: 450;
+                color: fade(#fff, 93%);
+            }
+        }
+
+        &-description {
+            font-weight: 450;
+            line-height: 155%;
+        }
+
+        &-img {
+            width: ~'calc(37% - 40px)';
+            position: relative;
+            @media screen and (@m768) {
+                width: 100%;
+                max-width: 360px;
+            }
+            @media screen and (@m375) {
+                max-width: 320px;
+            }
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                width: 98%;
+                height: 100%;
+                display: block;
+                position: absolute;
+            }
+
+            &::before {
+                background-color: #272727;
+                position: absolute;
+                top: 12px;
+                left: 25px;
+            }
+
+            &::after {
+                border: 3px solid @gold;
+                position: absolute;
+                top: -12px;
+                left: -11px;
+                z-index: 2;
+            }
+
+            img {
+                position: relative;
+                z-index: 2;
+            }
+        }
+    }
+
+    &__button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+    }
+}

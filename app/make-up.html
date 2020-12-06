@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta name="description" content="Описание сайта">
+
+        @@include('templates/base/_head-base.html')
+
+        <title>Make-up | Persona BIA</title>
+    </head>
+
+    <body id="index">
+        <div class="page-wrap">
+            @@include('templates/components/header.html')
+            <main>
+                @@include('./templates/components/services/make-up/offer.html')
+                @@include('./templates/components/services/make-up/services-list.html')
+                @@include('./templates/components/services/make-up/portfolio/portfolio.html')
+
+            </main>
+            @@include('templates/components/footer.html')
+
+            @@include('templates/components/backcall.html')
+        </div>
+
+        <!-- SCRIPTS -->
+        @@include('templates/base/_scripts.html')
+    </body>
+
+</html>

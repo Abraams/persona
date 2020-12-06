@@ -1,0 +1,34 @@
+<section id="staff" class="staff" style="background: url(./img/base/pattern-black.jpg);">
+  <div class="container">
+    <div class="staff__heading">
+      <i class="icon">
+        @@include('../../../../img/base/grass-left.svg')
+      </i>
+      <h2>Наши мастера</h2>
+      <i class="icon">
+        @@include('../../../../img/base/grass-right.svg')
+      </i>
+    </div>
+  </div>
+
+  <div class="staff__swiper-container swiper-container">
+
+    <div class="staff__swiper-wrapper swiper-wrapper">
+
+      @@include('./slide-1.html')
+      @@include('./slide-2.html')
+      @@include('./slide-3.html')
+      @@include('./slide-4.html')
+
+    </div>
+
+    <div class="staff__swiper-button-prev swiper-button-prev"></div>
+    <div class="staff__swiper-button-next swiper-button-next"></div>
+
+  </div>
+  <div class="staff__button-container">
+    <button class="staff__btn btn btn_primary" onClick="showSonlineWidget(sonlineWidgetOptions);">
+      <span>Записаться</span>
+    </button>
+  </div>
+</section>

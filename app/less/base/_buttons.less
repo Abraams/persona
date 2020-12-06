@@ -1,0 +1,144 @@
+button {
+    padding: 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.btn-color(@bg-color, @disabled:false) {
+    background: @bg-color;
+
+    span {
+        color: contrast(@bg-color, #000, #fff, 40%);
+    }
+}
+
+a.btn,
+button.btn,
+input.button,
+.button {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 12px 45px;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.18);
+    transition: background 0.25s ease-in-out, transform 0.1s;
+    transform: scale(1);
+
+    > span {
+        position: relative;
+        z-index: 2;
+
+        * {
+            position: inherit;
+        }
+    }
+
+    &_disabled {
+        .btn-color(@gray-light, true);
+        cursor: no-drop;
+        user-select: none;
+        touch-action: none;
+        opacity: 0.55;
+        box-shadow: 2px 3px 10px rgba(0, 0, 0, 0);
+
+        &::after {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 280%;
+        height: 100%;
+        position: absolute;
+        left: -180%;
+        top: 0;
+        transition-property: left, opacity;
+        transition-duration: 0.18s, 0.15s;
+        transition-timing-function: ease-in-out;
+    }
+
+    &_primary {
+        .btn-color(@gold-light);
+        &::after {
+            background: linear-gradient(
+                55deg,
+                @gold 0%,
+                @gold-light 65%,
+                @gold 130%
+            );
+        }
+
+        &-outlined {
+            border: 2px solid @gold;
+            box-shadow: none;
+            &::after {
+                left: -280%;
+                background: linear-gradient(
+                    55deg,
+                    @gold 0%,
+                    @gold-light 65%,
+                    @gold 130%
+                );
+                opacity: 0;
+            }
+            &:hover {
+                &::after {
+                    opacity: 0.35;
+                }
+            }
+        }
+    }
+    &_secondary {
+        .btn-color(@gray);
+        &::after {
+            background: linear-gradient(
+                55deg,
+                @gray 0%,
+                @gray-light 65%,
+                @gray 130%
+            );
+        }
+
+        &-outlined {
+            border: 2px solid @gray;
+            box-shadow: none;
+            &::after {
+                left: -280%;
+                background: linear-gradient(
+                    55deg,
+                    @gray 0%,
+                    @gray-light 65%,
+                    @gray 130%
+                );
+                opacity: 0;
+            }
+            &:hover {
+                &::after {
+                    opacity: 0.35;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        &::after {
+            left: -30%;
+        }
+    }
+    &:active {
+        &::after {
+            left: -65%;
+        }
+    }
+}

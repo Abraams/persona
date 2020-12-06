@@ -1,0 +1,98 @@
+.main-image {
+    &__wrapper {
+        max-width: 1640px;
+        margin: 0 auto;
+        margin-top: 25px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @media screen and (@m1200) {
+            margin-top: 0;
+        }
+        @media screen and (@m900) {
+            height: 650px;
+            position: relative;
+            picture {
+                height: 100%;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        @media screen and (@m768) {
+            height: 600px;
+        }
+        @media screen and (@m500) {
+            height: 450px;
+        }
+
+        &-info {
+            display: flex;
+            align-self: flex-end;
+            padding: 25px 45px;
+            background-color: #f3f3f3;
+            position: absolute;
+            bottom: 0;
+            @media screen and (@m1024) {
+                padding: 20px 30px;
+            }
+            @media screen and (@m768) {
+                transform: translateY(50%);
+                width: 98%;
+                left: auto;
+                right: auto;
+                text-align: center;
+                display: flex;
+                align-self: center;
+                justify-content: center;
+                align-items: center;
+            }
+            @media screen and (@m500) {
+                padding: 15px 10px;
+            }
+
+            .icon {
+                max-width: 39px;
+                @media screen and (@m1024) {
+                    max-width: 32px;
+                }
+                @media screen and (@m500) {
+                    display: none;
+                }
+                svg {
+                    fill: @black;
+                }
+            }
+
+            span {
+                margin-left: 15px;
+                font-size: 24px;
+                @media screen and (@m1024) {
+                    font-size: 22px;
+                }
+                @media screen and (@m768) {
+                    margin-left: 0;
+                }
+                @media screen and (@m375) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 30%;
+        background: #f3f3f3;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+    }
+}

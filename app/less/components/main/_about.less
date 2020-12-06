@@ -1,0 +1,112 @@
+.about {
+    &__wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+        margin-top: 50px;
+        padding-top: 200px;
+        margin-bottom: 200px;
+        @media screen and (@m1024) {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            margin-bottom: 75px;
+        }
+    }
+
+    &__img {
+        position: relative;
+        &-wrapper {
+            max-width: ~'calc(50% - 20px)';
+            padding: 3px;
+            position: relative;
+            @media screen and (@m1024) {
+                margin-bottom: 50px;
+                width: 70%;
+                max-width: 600px;
+            }
+            @media screen and (@m600) {
+                width: 90%;
+                min-width: 320px;
+            }
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                width: 98%;
+                height: 100%;
+                display: block;
+                position: absolute;
+            }
+            &::before {
+                background-color: #f9ecbf;
+                position: absolute;
+                top: 10px;
+                left: -10px;
+            }
+            &::after {
+                border: 2px solid @gold;
+                position: absolute;
+                top: -5px;
+                left: 15px;
+                z-index: 2;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 515px;
+        text-align: center;
+    }
+
+    &__description {
+        font-style: italic;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 160%;
+        margin-top: 35px;
+    }
+
+    &__btn {
+        margin-top: 45px;
+    }
+
+    .sun {
+        position: absolute;
+        left: 180px;
+        top: 0;
+
+        @media screen and (@m1450) {
+            left: -100px;
+        }
+        @media screen and (@m1280) {
+            left: -150px;
+        }
+        @media screen and (@m1024) {
+            left: 0;
+            right: 0;
+            top: -75px;
+            transform: rotateY(180deg);
+        }
+    }
+    .moon {
+        position: absolute;
+        right: 50px;
+        bottom: 0;
+        transform: translateY(50%);
+        @media screen and (@m1450) {
+            right: -100px;
+            bottom: -50px;
+        }
+        @media screen and (@m1280) {
+            right: -150px;
+        }
+        @media screen and (@m1024) {
+            display: none;
+        }
+    }
+}

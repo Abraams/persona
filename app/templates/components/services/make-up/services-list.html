@@ -1,0 +1,47 @@
+<section id="services-list" class="services-list">
+    <div class="services-list__container container">
+        <div class="services-list__img-wrapper">
+            <img src="./img/services/make-up/services/img-1.jpg" alt="Маникюр и педикюр">
+        </div>
+        <div class="services-list__content">
+            <div class="services-list__heading">
+                <h2>Прайс-лист</h2>
+            </div>
+
+            <div>
+                <ul class="services-list__prices dotted-list list list--gutter list--light">
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span><b>Макияж</b></span>
+                        </div>
+                    </li>
+
+                    @@loop('../services-list-item.html', [
+                    { value: "от 1 500 &#8381;", prop: "Touch up" },
+                    { value: "от 3 500 &#8381;", prop: "Sexy Smokey Eyes" },
+                    { value: "от 500 &#8381;", prop: "Накладные ресницы (пучки)" },
+                    { value: "от 3 000 &#8381;", prop: "Макияж дневной" },
+                    { value: "от 3 500 &#8381;", prop: "Макияж GLAMOUR" },
+                    ])
+
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span><b>Пирсинг</b></span>
+                        </div>
+                    </li>
+
+                    @@loop('../services-list-item.html', [
+                    { value: "от 1 500 &#8381;", prop: "Прокол ушей пистолетом (серьги вкл. в стоимость)" },
+                    ])
+
+                </ul>
+            </div>
+
+            <div class="services-list__btn-wrapper">
+                <button class="services-list__btn btn btn_primary" onClick="showSonlineWidget(sonlineWidgetOptions);">
+                    <span> Записаться </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

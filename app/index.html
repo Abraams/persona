@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta name="description" content="Описание сайта">
+
+		@@include('templates/base/_head-base.html')
+
+		<title>Persona BIA</title>
+	</head>
+
+	<body id="index">
+		<div class="page-wrap">
+			@@include('templates/components/header.html')
+			<!--  -->
+			<main>
+				@@include('templates/components/main/offer/offer.html')
+				@@include('templates/components/main/about.html')
+				@@include('templates/components/main/services/services.html')
+				@@include('templates/components/main/special.html')
+				@@include('templates/components/main/staff/staff.html')
+				@@include('templates/components/main/callback-form.html')
+				@@include('templates/components/main/contacts.html')
+			</main>
+			@@include('templates/components/footer.html')
+
+			@@include('./templates/components/modals/promo/promo-1.html')
+
+			@@include('templates/components/backcall.html')
+		</div>
+
+		<!-- SCRIPTS -->
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=ad3603a3-45d8-4813-8865-95f9633d7fd0&lang=ru_RU"
+			type="text/javascript">
+			</script>
+		@@include('templates/base/_scripts.html')
+	</body>
+
+</html>

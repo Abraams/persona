@@ -1,0 +1,351 @@
+.header {
+    width: 100vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 126px;
+    transition: 0.35s ease-in-out;
+    @media screen and (@m1200) {
+        z-index: 9999;
+        height: auto;
+    }
+
+    &._open {
+        .container_fluid {
+            transform: translateX(0);
+            box-shadow: -10px 0 45px fade(@gray, 20%);
+        }
+
+        .header__bg-closeable {
+            right: 0;
+            width: 100vw;
+            height: 100%;
+            position: fixed;
+        }
+
+        .header__toggler {
+            span {
+                position: absolute;
+                transition: 0.45s ease-in-out;
+
+                &:nth-child(1) {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(-135deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                    transition: 0.2s ease-in-out;
+                }
+
+                &:nth-child(3) {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(135deg);
+                }
+            }
+        }
+    }
+
+    &._fixed {
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+        z-index: 1001;
+        .container.container_fluid {
+            background-color: #fff;
+            position: fixed;
+            width: 100%;
+            max-width: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header {
+            &__content {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 0;
+                max-width: 1440px;
+                width: 100%;
+            }
+
+            &__logo {
+                img {
+                    display: none;
+                }
+            }
+
+            &__navigation {
+                align-items: flex-start;
+            }
+
+            &__menu {
+                justify-content: flex-start;
+
+                > li {
+                    > a {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &__other {
+                display: flex;
+            }
+
+            &__work-time {
+                display: none;
+            }
+
+            &__btn {
+                margin-left: 35px;
+            }
+        }
+    }
+
+    .container_fluid {
+        @media screen and (@m1200) {
+            width: 520px;
+            min-width: 320px;
+            height: 100vh;
+            padding: 0;
+            background-color: #fff;
+            border-left: 2px solid @black;
+            box-shadow: -10px 0 45px fade(@gray, 0%);
+            position: fixed;
+            left: auto;
+            right: 0;
+            transform: translateX(100%);
+            transition: 0.35s ease-in-out;
+            z-index: 2;
+        }
+    }
+
+    &__bg-closeable {
+        @media screen and (@m1200) {
+            position: absolute;
+            z-index: -1;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0;
+        @media screen and (@m1200) {
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+
+    &__logo {
+        text-align: center;
+    }
+
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 85%;
+        @media screen and (@m1200) {
+            width: 100%;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        @media screen and (@m1200) {
+            flex-direction: column;
+        }
+
+        > li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 40px;
+            position: relative;
+            @media screen and (@m1200) {
+                margin: 8px 0;
+            }
+
+            &:nth-last-child {
+                margin-right: 0;
+            }
+            > a {
+                display: inline-flex;
+                padding: 2px 0;
+                color: @black;
+                position: relative;
+                font-size: 18px;
+                transition: 0.25s ease-in-out, font-size 0s;
+                @media screen and (@m1200) {
+                    font-size: 22px;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 0%;
+                    height: 2px;
+                    background: @gold;
+                    position: absolute;
+                    bottom: -3px;
+                    left: auto;
+                    right: 0;
+                    transition: inherit;
+                }
+            }
+
+            &:hover,
+            &.active {
+                a > {
+                    &::after {
+                        width: 100%;
+                        left: 0;
+                        right: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (@m1200) {
+            width: 230px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        &-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+
+            @media screen and (@m1200) {
+                margin: 0 9px;
+            }
+
+            &:nth-last-child {
+                margin-right: 0px;
+            }
+        }
+        &-icon {
+            width: 32px;
+            height: 32px;
+            @media screen and (@m1200) {
+                width: 38px;
+                height: 38px;
+            }
+            > svg {
+                fill: @black;
+            }
+
+            &:hover {
+                > svg {
+                    fill: @gold;
+                }
+            }
+        }
+    }
+
+    &__work-time {
+        margin-top: 8px;
+        @media screen and (@m1200) {
+            margin-top: 12px;
+        }
+        > p {
+            color: @gray;
+            font-weight: 450;
+            font-size: 14px;
+            margin-bottom: 2px;
+
+            @media screen and (@m1200) {
+                font-size: 17px;
+                text-align: center;
+            }
+
+            &:nth-last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__btn {
+        display: none !important;
+    }
+
+    &__other {
+        @media screen and (@m1200) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__mobile {
+        display: none;
+        @media screen and (@m1200) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 75px;
+            width: 100%;
+            background-color: #fff;
+            svg {
+                fill: @black;
+
+                rect {
+                    stroke: @black;
+                }
+            }
+        }
+    }
+
+    &__toggler {
+        display: none;
+        @media screen and (@m1200) {
+            display: flex;
+            position: fixed;
+            padding: 10px 0;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 55px;
+            height: 55px;
+            background-color: #fff;
+            border-radius: 10em;
+            top: 10px;
+            right: 15px;
+            transition: 0.6s ease-in-out;
+            box-shadow: 0px 0px 6px 1px fade(@black, 12%);
+            z-index: 999999;
+            cursor: pointer;
+            span {
+                width: 28px;
+                height: 2px;
+                background-color: #000;
+                transition: 0.2s ease-in-out;
+            }
+        }
+
+        @media screen and (@m500) {
+            width: 65px;
+            height: 65px;
+            top: 15px;
+            right: 20px;
+            padding: 15px 0;
+            span {
+                width: 34px;
+            }
+        }
+    }
+}

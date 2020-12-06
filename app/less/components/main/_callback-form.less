@@ -1,0 +1,196 @@
+.callback-form {
+    margin-top: -150px;
+    &__form {
+        margin: 0 auto;
+        padding: 100px 180px 100px;
+        color: #fff;
+        background: url('/img/main/callback-form/img-1.png') no-repeat 50% 35%
+            #5f5f5f;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        @media screen and (@m900) {
+            padding: 80px 70px;
+        }
+        @media screen and (@m500) {
+            padding: 55px 35px;
+        }
+        @media screen and (@m425) {
+            padding: 35px 20px;
+        }
+    }
+
+    .container {
+        @media screen and (@m425) {
+            padding: 0;
+        }
+    }
+
+    &__heading {
+        font-size: 36px;
+        margin-bottom: 55px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 25px;
+        @media screen and (@m600) {
+            flex-direction: column;
+
+            & > * {
+                &:first-child {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+
+        @media screen and (@m375) {
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        position: relative;
+        @media screen and (@m900) {
+            width: ~'calc(100% - 65px)';
+        }
+        @media screen and (@m600) {
+            width: 100%;
+        }
+
+        &.with-button {
+            @media screen and (@m600) {
+                width: ~'calc(100% - 65px)';
+            }
+        }
+
+        &_half {
+            width: ~'calc(50% - 20px)';
+            @media screen and (@m900) {
+                width: ~'calc(50% - 15px)';
+            }
+        }
+
+        .checkbox {
+            margin-top: 18px;
+            @media screen and (@m500) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        color: fade(#fff, 85%);
+        > a {
+            color: #fff;
+        }
+
+        > input {
+            margin-top: 15px;
+            border: none;
+            background-color: transparent;
+            font-size: 18px;
+            line-height: 25px;
+            padding: 5px 6px;
+            color: #fff;
+            &::placeholder {
+                color: fade(#fff, 65%);
+            }
+
+            + span {
+                &::before,
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    position: absolute;
+                    bottom: -4px;
+
+                    transition: 0.2s ease-in-out;
+                }
+
+                &::before {
+                    width: 100%;
+                    background: #fff;
+                    left: 0;
+                }
+
+                &::after {
+                    width: 0%;
+                    background: @gold-active;
+                    left: auto;
+                    right: 0;
+                    box-shadow: 0px 0px 15px 2px fade(#fff, 0%);
+                }
+            }
+            &:focus {
+                + span {
+                    &::after {
+                        width: 100%;
+                        left: 0;
+                        right: auto;
+                        box-shadow: 0px 0px 8px 0px fade(#fff, 15%);
+                    }
+                }
+            }
+        }
+    }
+
+    .radio__label {
+        color: fade(#fff, 85%);
+
+        > a {
+            color: #fff;
+        }
+    }
+
+    &__submit {
+        background-color: #535353;
+        width: 55px;
+        height: 55px;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: -5px;
+        transform: translateX(100%);
+        border-radius: 10em;
+        box-shadow: 0px 0px 0px 0px fade(#fff, 0%);
+        transition: 0.1s ease-in-out;
+        cursor: pointer;
+        @media screen and (@m600) {
+            background-color: #fff;
+        }
+        > svg {
+            width: 28px;
+            height: 28px;
+            transition: 0.1s ease-in-out;
+            @media screen and (@m600) {
+                fill: #535353;
+            }
+        }
+
+        &:hover {
+            transform: translateX(100%);
+            background-color: fade(#fff, 85%);
+            box-shadow: 0px 0px 15px 2px fade(#fff, 15%);
+            > svg {
+                fill: #535353;
+                @media screen and (@m600) {
+                    fill: #fff;
+                }
+                > path {
+                    fill: #535353;
+                    @media screen and (@m600) {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

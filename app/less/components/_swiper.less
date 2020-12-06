@@ -1,0 +1,29 @@
+.swiper {
+	&-pagination {
+		&-bullet {
+			width: 11px;
+			height: 11px;
+			&:not(.swiper-pagination-bullet-active) {
+				background: #fff;
+				opacity: 0.5;
+			}
+		}
+	}
+}
+
+.swiper-container-horizontal
+	> .swiper-pagination-bullets
+	.swiper-pagination-bullet {
+	margin: 0 6px;
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+	right: 20px;
+	left: auto;
+}
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+	left: 20px;
+	right: auto;
+}
