@@ -15,6 +15,9 @@ const findModalByClass = className => {
 }
 
 const modalToggler = ($el, status) => {
+    if (!$el) {
+        return false
+    }
     if ($openModal && $openModal.id !== $el.id) {
         $openModal.classList.remove('_open')
     }
@@ -23,14 +26,18 @@ const modalToggler = ($el, status) => {
     $openModal = status ? $el : undefined
 }
 
-function openModal(id) {
+const openModal = id => {
     modalToggler(findModalById(id), true)
+}
+
+const getRandomNumber = (min, max) => {
+    return Math.random() * (max - min) + min
 }
 
 const initModal = () => {
     setTimeout(() => {
         openModal('promo-modal-1')
-    }, 10000)
+    }, getRandomNumber(10, 30) * 1000)
 
     modals.forEach(modal => {
         modal.addEventListener('click', ({ target }) => {
