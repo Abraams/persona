@@ -30,13 +30,19 @@ const openModal = id => {
     modalToggler(findModalById(id), true)
 }
 
+const closeModal = id => {
+    modalToggler(findModalById(id), false)
+}
+
 const getRandomNumber = (min, max) => {
     return Math.random() * (max - min) + min
 }
 
 const initModal = () => {
     setTimeout(() => {
-        openModal('promo-modal-1')
+        if (!$openModal) {
+            openModal('promo-modal-1')
+        }
     }, getRandomNumber(10, 30) * 1000)
 
     modals.forEach(modal => {

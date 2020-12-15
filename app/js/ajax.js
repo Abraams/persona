@@ -22,6 +22,7 @@ const submitForm = e => {
             body: formData,
         }).then(response => console.log(response))
 
+        closeModal(`${$openModal && $openModal.id}`)
         e.target.reset()
     } catch (error) {
         throw error
