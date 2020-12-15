@@ -16,7 +16,7 @@ const findModalByClass = className => {
 
 const modalToggler = ($el, status) => {
     if (!$el) {
-        return false
+        throw new Error('Такого элемента не существует')
     }
     if ($openModal && $openModal.id !== $el.id) {
         $openModal.classList.remove('_open')
@@ -54,7 +54,7 @@ const initModal = () => {
     })
 
     HTML.addEventListener('click', ({ target }) => {
-        const targetClosestButton = target.closest('.btn[data-open-modal]')
+        const targetClosestButton = target.closest('[data-open-modal]')
         const isOpenModalButton = !!targetClosestButton
 
         if (isOpenModalButton) {

@@ -17,7 +17,10 @@
         }
 
         > div {
+            display: flex;
             align-items: stretch;
+            flex-direction: column;
+            justify-content: space-between;
         }
     }
     &__map-wrapper {
@@ -49,11 +52,16 @@
 
     &__heading {
         font-size: 24px;
-        padding-top: 45px;
+        display: flex;
+
+        .icon {
+            max-width: 28px;
+            margin-right: 8px;
+        }
     }
 
     &__parking-list {
-        margin-top: 50px;
+        padding-top: 45px;
         > li {
             margin-bottom: 10px;
             line-height: 150%;
