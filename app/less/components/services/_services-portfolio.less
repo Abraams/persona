@@ -17,6 +17,24 @@
         }
     }
 
+    .portfolio__swiper-slide.swiper-slide {
+        width: auto;
+        height: 486px;
+
+        @media screen and (@m500) {
+            height: 380px;
+        }
+
+        picture {
+            height: 100%;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
     &__heading {
         text-align: center;
         margin-bottom: 50px;

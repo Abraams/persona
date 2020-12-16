@@ -81,7 +81,7 @@
             overflow: hidden;
             z-index: 99;
 
-            &.img-brightness {
+            #index &.img-brightness {
                 &::after {
                     background: rgba(0, 0, 0, 0.05);
                     @media screen and (@m900) {
@@ -145,6 +145,10 @@
             @media screen and (@m900) {
                 opacity: 1;
                 transform: translateY(0px);
+            }
+
+            #promo & {
+                display: none;
             }
         }
         &__title {
