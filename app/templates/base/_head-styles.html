@@ -10,16 +10,8 @@
         bottom: 0;
         right: 0;
         border: 0px solid #f1d15f;
-        z-index: 2000;
+        z-index: 99999;
         cursor: pointer;
-    }
-
-    @media screen and (max-width: 500px) {
-
-        .son_wrapper {
-            right: -28px;
-            bottom: -28px;
-        }
     }
 
     .son_circle {
@@ -64,5 +56,25 @@
         animation: son_outercircle 2s infinite linear;
         margin-top: 20px;
         margin-left: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .son_wrapper {
+            width: 100px;
+            height: 100px;
+        }
+
+        .son_circle {
+            width: 80px;
+            height: 80px;
+        }
+
+        .son_outercircle {
+            width: 50px;
+            height: 50px;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
     }
 </style>

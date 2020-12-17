@@ -4,18 +4,18 @@ require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+// $mail->SMTPDebug = 0;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.mail.ru';  	  					// Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'email-from'; // Ваш логин от почты с которой будут отправляться письма
-$mail->Password = 'password'; // Ваш пароль от почты с которой будут отправляться письма
+$mail->Username = 'persona-bia-robot@inbox.ru'; // Ваш логин от почты с которой будут отправляться письма
+$mail->Password = ''; // Ваш пароль от почты с которой будут отправляться письма
 $mail->SMTPSecure = 'ssl';// Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
-$mail->setFrom('email-from', 'ПЕРСОНА BIA'); // от кого будет уходить письмо?
-$mail->addAddress('email-to');     // Кому будет уходить письмо
+$mail->setFrom('persona-bia-robot@inbox.ru', 'ПЕРСОНА BIA'); // от кого будет уходить письмо?
+$mail->addAddress('info@persona-bia.ru');     // Кому будет уходить письмо
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
@@ -23,13 +23,13 @@ $mail->addAddress('email-to');     // Кому будет уходить пис�
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-
+// E4tueI%oLuE2
 
 $message = '';
 
-$message .='<p>Имя клиента: '.$_POST['user_name'].'</p>';
-$message .='<p>E-mail клиента: '.$_POST['user_email'].'</p>';
-$message .='<p>Номер телефона клиента: <a href="'.$_POST['user_tel'].'">'.$_POST['user_tel'].'</a></p>';
+$message .='<p><b>Имя клиента</b>: '.$_POST['user_name'].'</p>';
+$message .='<p><b>E-mail клиента</b>: '.$_POST['user_email'].'</p>';
+$message .='<p><b>Номер телефона клиента</b>: <a href="'.$_POST['user_tel'].'">'.$_POST['user_tel'].'</a></p>';
 
 $mail->Subject = $_POST['subject'];
 $mail->Body    = $message;

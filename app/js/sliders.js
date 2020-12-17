@@ -108,21 +108,19 @@ if ($protfolioSlider) {
         loop: true,
         spaceBetween: 5,
         grabCursor: true,
+
         breakpoints: {
             320: {
-                slidesPerView: 1,
+                slidesPerView: 'auto',
                 centeredSlides: true,
             },
-            550: {
+            800: {
                 slidesPerView: 2,
                 freeMode: true,
             },
-
-            900: {
-                slidesPerView: 3,
-            },
             1100: {
-                slidesPerView: 4,
+                slidesPerView: 'auto',
+                centeredSlides: true,
             },
         },
     })
