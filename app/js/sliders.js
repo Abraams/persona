@@ -108,7 +108,6 @@ if ($protfolioSlider) {
         loop: true,
         spaceBetween: 5,
         grabCursor: true,
-
         breakpoints: {
             320: {
                 slidesPerView: 'auto',

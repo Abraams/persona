@@ -43,7 +43,7 @@ const initModal = () => {
         if (!$openModal) {
             openModal('promo-modal-1')
         }
-    }, getRandomNumber(10, 30) * 1000)
+    }, getRandomNumber(25, 60) * 1000)
 
     modals.forEach(modal => {
         modal.addEventListener('click', ({ target }) => {

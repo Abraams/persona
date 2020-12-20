@@ -111,7 +111,6 @@ function JS() {
                 basename: 'scripts',
             }),
         )
-        .pipe(dest(PATHS.bulid.js))
         .pipe(babel())
         .pipe(
             uglify({

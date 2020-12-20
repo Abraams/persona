@@ -156,3 +156,6 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/git,node,windows
 app/Доступы.txt
+app/доступы/Доступы.txt
+доступы/Доступы.txt
+доступы/2020-12-17_23-27-48.png
