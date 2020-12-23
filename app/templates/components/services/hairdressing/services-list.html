@@ -12,18 +12,19 @@
                 <ul class="services-list__prices dotted-list list list--gutter list--light">
                     <li class="list__item list__item-title">
                         <div class="param">
-                            <span><b>Стиль (мытье, стрижка, легкая укладка)</b></span>
+                            <span><b>Стиль</b> <small>(мытье, стрижка, легкая укладка)</small></span>
                         </div>
                     </li>
 
                     @@loop('../services-list-item.html', [
-                    { value: "от 1 400 &#8381;", prop: "от Мастера" },
-                    { value: "от 2 000 &#8381;", prop: "от Топ-мастера" },
-                    { value: "от 2 500 &#8381;", prop: "от Стилиста" },
-                    { value: "от 2 900 &#8381;", prop: "Стилист с индивидуальным прайсом (М)" },
-                    { value: "от 3 300 &#8381;", prop: "Стилист с индивидуальным прайсом (Ж)" },
+                    { value: "1 400 &#8381;", prop: "от Мастера" },
+                    { value: "2 000 &#8381;", prop: "от Топ-мастера" },
+                    { value: "2 500 &#8381;", prop: "от Стилиста" },
+                    { value: "2 900 &#8381;", prop: "Стилист с индивидуальным прайсом (м)" },
+                    { value: "3 300 &#8381;", prop: "Стилист с индивидуальным прайсом (ж)" },
 
-                    { value: "от 900 &#8381;", prop: "Детский стиль модельная стрижка (дети до 10 лет)" },
+                    { value: "от 900 &#8381;",
+                    prop: "Детский стиль модельная стрижка <small>(дети до 10 лет)</small>" },
                     { value: "от 400 &#8381;", prop: "Коррекция челки" },
                     { value: "от 1 200 &#8381;", prop: "Стрижка машинкой (м)" },
                     { value: "от 500 &#8381;", prop: "Коррекция бороды и усов" },
@@ -40,36 +41,32 @@
                     { value: "от 1 100 &#8381;", prop: "Укладка дневная" },
                     { value: "от 1 600 &#8381;", prop: "Укладка коктейльная"},
                     { value: "от 2 300 &#8381;", prop: "Прическа Вечерняя" },
-                    { value: "от 3 200 &#8381;", prop: "Укладка ´Афрокудри´" },
+                    { value: "от 3 200 &#8381;", prop: "Укладка 'Афрокудри'" },
                     ])
 
 
                     <li class="list__item list__item-title">
                         <div class="param">
-                            <span><b>Окрашивание с сушкой*</b></span>
+                            <span><b>Окрашивание</b> <small>(с сушкой) * WELLA. REDKEN.</small></span>
                         </div>
                     </li>
 
                     @@loop('../services-list-item.html', [
-                    { value: "от 1 900 &#8381;", prop: "COLOR BAR (color уход)" },
+                    { value: "1 900 &#8381;", prop: "COLOR BAR (color уход)" },
                     { value: "от 2 900 &#8381;", prop: "Окрашивание корней" },
                     { value: "от 3 600 &#8381;", prop: "Окрашивание 1" },
                     { value: "от 4 200 &#8381;", prop: "Окрашивание 2"},
                     ])
 
-                    <!-- <li class="list__item list__item-title">
-                        <div class="param">
-                            <span><b>Окрашивание для МУЖЧИН</b></span>
-                        </div>
-                    </li>
-
-                    @@loop('../services-list-item.html', [
-                    { value: "от  1 500 &#8381;", prop: "Окрашивание Color Camo (камуфляж седины)" },
-                    ]) -->
-
                     <li class="list__item list__item-title">
                         <div class="param">
-                            <span><b>Тонирование с сушкой*</b></span>
+                            <span>
+                                <b>Тонирование</b>
+                                <small>
+                                    (с сушкой)</small> * <small></small>(Wella Color Touch / Redken Shades
+                                EQ)
+                                </small>
+                            </span>
                         </div>
                     </li>
 
@@ -80,19 +77,20 @@
 
                     <li class="list__item list__item-title">
                         <div class="param">
-                            <span><b>Окрашивание. Творческая работа</b></span>
+                            <span><b>Окрашивание. Творческая работа</b> <small>(с сушкой) </small>*<small> WELLA.
+                                    REDKEN.</small></span>
                         </div>
                     </li>
 
                     @@loop('../services-list-item.html', [
                     { value: "от 5 200 &#8381;", prop: "Творческая работа" },
-                    { value: "от 11 500 &#8381;", prop: "MAGMAMANIA"},
+                    { value: "11 500 &#8381;", prop: "MAGMAMANIA"},
                     { value: "от 17 000 &#8381;", prop: "AirTouch"},
                     ])
 
                     <li class="list__item list__item-title">
                         <div class="param">
-                            <span><b>Блондирование с сушкой</b></span>
+                            <span><b>Блондирование</b> <small>(с сушкой) </small>*<small> WELLA. REDKEN.</small></span>
                         </div>
                     </li>
 
@@ -103,7 +101,7 @@
 
                     <li class="list__item list__item-title">
                         <div class="param">
-                            <span><b>Мелирование с сушкой</b></span>
+                            <span><b>Мелирование</b> <small>(с сушкой) </small>*<small> WELLA. REDKEN.</small></span>
                         </div>
                     </li>
 
@@ -116,19 +114,22 @@
 
                     <li class="list__item list__item-title">
                         <div class="param">
-                            <span><b>Уход за волосами</b></span>
+                            <span><b>Трансформирование текстуры</b> <small>(с сушкой)</small></span>
                         </div>
                     </li>
 
                     @@loop('../services-list-item.html', [
-                    { value: "от 500 &#8381;", prop: "Kérastase" },
-                    { value: "от 500 &#8381;", prop: "Redken" },
-                    { value: "от 500 &#8381;", prop: "Lebel" },
+                    { value: "от 4 500 &#8381;", prop: "Трансформация текстуры" },
+                    { value: "от 5 000 &#8381;", prop: "БИКСИПЛАСТИЯ <small>/ биопластика волос</small>" },
+                    { value: "5 900 &#8381;", prop: "Ламинирование Sebastian" },
+                    { value: "от 6 500 &#8381;", prop: "Keratine <small>Контроль над волосами</small>" },
+                    { value: "от 6 500 &#8381;", prop: "Botox <small>для волос</small>" },
                     ])
 
                     <li class="list__item list__item-title">
                         <div class="param">
-                            <span><b>Другие услуги</b></span>
+                            <span><b>Меню уходов</b> <small> (сушка включена в стоимость ухода; укладка
+                                    тарифицируется отдельно)</small></span>
                         </div>
                     </li>
 
@@ -136,22 +137,19 @@
                     { value: "от 500 &#8381;", prop: "Kérastase" },
                     { value: "от 500 &#8381;", prop: "Redken" },
                     { value: "от 500 &#8381;", prop: "Lebel" },
+                    { value: "3 700 &#8381;", prop: "NIOXIN Сервис" },
                     ])
 
-                    @@loop('../services-list-item.html', [
-                    { value: "от 5 900 &#8381;", prop: "Ламинирование Sebastian + сушка" },
-                    { value: "от 5 000 &#8381;", prop: "БИКСИПЛАСТИЯ / биопластика волос" },
-                    { value: "от 4 500 &#8381;", prop: "Трансформация текстуры" },
-                    { value: "от 6 500 &#8381;", prop: "Контроль над волосами Keratine" },
-                    { value: "от 6 500 &#8381;", prop: "Контроль над волосами Keratine" },
-                    { value: "от 6 500 &#8381;", prop: "Botox для волос" },
-                    { value: "от 3 700 &#8381;", prop: "NIOXIN Сервис" },
-                    ])
-
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span><small>NIOXIN Сервис - Программа восстановления кожи головы и укрепления волос с
+                                    регенерирующим пилингом</small></span>
+                        </div>
+                    </li>
                 </ul>
 
                 <p class="services-list__prices-description">
-                    * - тип материала уточняйте у специалиста
+                    * - особенности услуги уточняйте у администратора
                 </p>
 
             </div>

@@ -14,7 +14,7 @@ function init() {
 
     myMap.geoObjects.add(
         new ymaps.Placemark(
-            [55.787864, 37.63519],
+            [55.788044, 37.635187],
             {
                 balloonContent: 'Persona BIA. Проспект Мира, 70',
             },

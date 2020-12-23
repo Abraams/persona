@@ -64,27 +64,17 @@ if ($servicesSlider) {
 if ($promoSlider) {
     const promoSlider = new Swiper('.promo__swiper-container', {
         loop: true,
+        spaceBetween: 25,
         grabCursor: true,
+        centeredSlides: true,
         navigation: {
             nextEl: '.promo__swiper-button-next',
             prevEl: '.promo__swiper-button-prev',
         },
         breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            },
-            769: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-            },
-            1050: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-            1369: {
-                slidesPerView: 4,
-                spaceBetween: 25,
+            1100: {
+                slidesPerView: 'auto',
+                centeredSlides: true,
             },
         },
     })
@@ -115,7 +105,6 @@ if ($protfolioSlider) {
             },
             800: {
                 slidesPerView: 2,
-                freeMode: true,
             },
             1100: {
                 slidesPerView: 'auto',

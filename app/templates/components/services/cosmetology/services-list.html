@@ -24,21 +24,34 @@
                     </li>
 
                     @@loop('../services-list-item.html', [
-                    { value: "от 1 500 &#8381;", prop: "Моделирующий массаж лица шеи и зоны декольте" },
-                    { value: "от 2 500 &#8381;", prop: "R F RINNOVA (AMI Италия) Мгновенный лифтинг ЛИЦО" },
-                    { value: "от 1 500 &#8381;", prop: "Прокол ушей пистолетом (серьги вкл. в стоимость)"},
+                    { value: "1 500 &#8381;", prop: "Моделирующий массаж лица шеи и зоны декольте" },
+                    { value: "2 500 &#8381;", prop: "RF RINNOVA <small>(AMI Италия)</small> Мгновенный лифтинг ЛИЦО" },
+                    { value: "1 500 &#8381;", prop: "Прокол ушей пистолетом <small>(серьги вкл. в стоимость)</small>"},
                     ])
 
                     <li class="list__item list__item-title">
                         <div class="param">
-                            <span><b>Ультразвуковое очищение</b></span>
+                            <span><b>Ультразвуковое очищение кожи</b></span>
                         </div>
                     </li>
 
-                    @@loop('../services-list-item.html', [
-                    { value: "от 2 300 &#8381;", prop: "Экспресс ультразвуковая чистка лица" },
-                    { value: "от 2 950 &#8381;", prop: "Ультразвуковая чистка лица" },
-                    ])
+                    <li class="list__item">
+                        <div class="param">
+                            <span class="param__value">2 300&#8381;</span>
+                            <span class="param__prop">Экспресс ультразвуковая чистка лица <small>(демакияж +
+                                    ультразвуковая чистка лица +
+                                    завершающий крем по типу кожи)</small></span>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <div class="param">
+                            <span class="param__value">2 950&#8381;</span>
+                            <span class="param__prop">Ультразвуковая чистка лица <small>(демакияж + ультразвуковая
+                                    чистка лица + маска по типу кожи
+                                    + завершающий крем по типу кожи)</small></span>
+                        </div>
+                    </li>
+
 
                     <li class="list__item list__item-title">
                         <div class="param">
@@ -47,9 +60,9 @@
                     </li>
 
                     @@loop('../services-list-item.html', [
-                    { value: "от 3 500 &#8381;", prop: "Глубокое очищение кожи - Экспресс очищение" },
-                    { value: "от 4 500 &#8381;", prop: "Глубокое очищение кожи - Комплексное очищение"},
-                    { value: "от 700 &#8381;", prop: "Маска"},
+                    { value: "3 500 &#8381;", prop: "Глубокое очищение кожи <small>(Экспресс очищение)</small>" },
+                    { value: "4 500 &#8381;", prop: "Глубокое очищение кожи <small>(Комплексное очищение)</small>"},
+                    { value: "700 &#8381;", prop: "Маска"},
                     ])
 
                     <li class="list__item list__item-title">
@@ -59,10 +72,10 @@
                     </li>
 
                     @@loop('../services-list-item.html', [
-                    { value: "от 3 500 &#8381;", prop: "Уход EGIA ультра-увлажняющий" },
-                    { value: "от 3 500 &#8381;", prop: "Уход EGIA Лифтинг" },
-                    { value: "от 3 500 &#8381;", prop: "Уход EGIA осветляющий" },
-                    { value: "от 3 500 &#8381;", prop: "Уход EGIA анти-стресс" },
+                    { value: "3 500 &#8381;", prop: "Уход EGIA ультра-увлажняющий" },
+                    { value: "3 500 &#8381;", prop: "Уход EGIA Лифтинг" },
+                    { value: "3 500 &#8381;", prop: "Уход EGIA осветляющий" },
+                    { value: "3 500 &#8381;", prop: "Уход EGIA анти-стресс" },
                     ])
 
                     <li class="list__item list__item-title">
@@ -72,7 +85,7 @@
                     </li>
 
                     @@loop('../services-list-item.html', [
-                    { value: "от 3 650 &#8381;", prop: "Программа ´Ренессанс´" },
+                    { value: "3 650 &#8381;", prop: "Программа ´Ренессанс´" },
                     ])
 
                     <li class="list__item list__item-title">
@@ -82,10 +95,85 @@
                     </li>
 
                     @@loop('../services-list-item.html', [
-                    { value: "от 4 700&#8381;", prop: "G-DERM Уход 'Вторая кожа' (БИО Кожа)" },
-                    { value: "от 3 100 &#8381;", prop: "G-DERM Кераторегулирующий пилинг"},
+                    { value: "4 700&#8381;", prop: "G-DERM Уход 'Вторая кожа' (БИО Кожа)" },
+                    { value: "3 100 &#8381;", prop: "G-DERM Кераторегулирующий пилинг"},
                     ])
 
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span><small>
+                                    "В 2013 году, благодаря успешно проведённым научно-исследовательским работам, был
+                                    получен серийный образец — гистоэквивалент — биопластического материала G-DERM.
+                                </small></span>
+                        </div>
+                    </li>
+
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span>
+                                <small>
+                                    • Материал обладает высокой биосовместимостью, внешним и структурным сходством с
+                                    кожей человека.
+                                </small>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span>
+                                <small>
+                                    • Оригинальная технология «дробления» гиалуроновой кислоты посредством гамма
+                                    излучения, приводящая к уменьшению размера молекулы до 2-3 нм для трансдермального
+                                    проникновения в кожу без инъекций.
+                                </small>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span>
+                                <small>
+                                    • Модификация гиалуроновой кислоты нехимическим способом, посредством светового
+                                    воздействия с формированием поперечных связей, без использования BDDE.
+                                </small>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span>
+                                <small>
+                                    • Метод структуризации низкомолекулярной гиалуроновой кислоты посредством пептидного
+                                    соединения.
+                                </small>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span>
+                                <small>
+                                    • Запатентованный пептидный комплекс, способствующий оптимизации процессов
+                                    метаболизма клеток кожи.
+                                </small>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list__item list__item-title">
+                        <div class="param">
+                            <span>
+                                <small>
+                                    • Использование особого метода консервации, посредством добавления коллоидного
+                                    раствора серебра."
+                                </small>
+                            </span>
+                        </div>
+                    </li>
                 </ul>
 
             </div>
