@@ -8,20 +8,23 @@ if ($map) {
 
 function init() {
     const myMap = new ymaps.Map('map', {
-        center: [55.787851, 37.635028],
-        zoom: 18,
+        center: [55.788001, 37.63437],
+        zoom: 19,
     })
 
-    myMap.geoObjects.add(
-        new ymaps.Placemark(
-            [55.788044, 37.635187],
-            {
-                balloonContent: 'Persona BIA. Проспект Мира, 70',
-            },
-            {
-                preset: 'islands#blueCircleDotIconWithCaption',
-                iconColor: 'red',
-            },
-        ),
+    const placemark = new ymaps.Placemark(
+        [55.788001, 37.63518],
+        {
+            balloonContent:
+                '<a target="_blank" href="https://yandex.ru/maps/-/CCUIIHd8KB">Персона Lab BIA. Проспект Мира 70</a>',
+        },
+        {
+            preset: 'islands#blueCircleDotIconWithCaption',
+            iconColor: 'pink',
+        },
     )
+
+    myMap.geoObjects.add(placemark)
+
+    placemark.balloon.open()
 }
